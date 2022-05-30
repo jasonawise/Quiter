@@ -10,21 +10,7 @@ import SwiftUI
 struct AddQuiterView: View {
     @State private var stopedDate = Date()
     @State private var today = Date()
-    
-    func numberOfDaysBetweenDates(startDate: Date, endDate: Date) -> Int {
-        
-        let calendar = Calendar.current
-        
-        let components = calendar.dateComponents([.day], from: startDate, to: endDate)
-
-        return components.day!
-    }
-        
-    func typeCheck() {
-        print(type(of: today))
-    }
-    
-    
+ 
     var body: some View {
         VStack {
             Text("When did you stop it?")

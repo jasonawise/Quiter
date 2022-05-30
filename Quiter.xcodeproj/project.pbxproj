@@ -13,6 +13,7 @@
 		2CE14592284583F600256981 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE14591284583F600256981 /* Preview Assets.xcassets */; };
 		2CE145992845841700256981 /* AddQuiterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE145982845841700256981 /* AddQuiterView.swift */; };
 		2CE1459B2845842200256981 /* QuiterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE1459A2845842200256981 /* QuiterView.swift */; };
+		2CE1459F2845879D00256981 /* UtilityFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE1459E2845879D00256981 /* UtilityFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		2CE14591284583F600256981 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2CE145982845841700256981 /* AddQuiterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddQuiterView.swift; sourceTree = "<group>"; };
 		2CE1459A2845842200256981 /* QuiterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuiterView.swift; sourceTree = "<group>"; };
+		2CE1459E2845879D00256981 /* UtilityFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityFunctions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 		2CE14589284583F600256981 /* Quiter */ = {
 			isa = PBXGroup;
 			children = (
+				2CE1459E2845879D00256981 /* UtilityFunctions.swift */,
 				2CE1458A284583F600256981 /* QuiterApp.swift */,
 				2CE1458C284583F600256981 /* ContentView.swift */,
 				2CE145982845841700256981 /* AddQuiterView.swift */,
@@ -146,6 +149,7 @@
 				2CE1459B2845842200256981 /* QuiterView.swift in Sources */,
 				2CE145992845841700256981 /* AddQuiterView.swift in Sources */,
 				2CE1458D284583F600256981 /* ContentView.swift in Sources */,
+				2CE1459F2845879D00256981 /* UtilityFunctions.swift in Sources */,
 				2CE1458B284583F600256981 /* QuiterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
