@@ -17,6 +17,6 @@ func numberOfDaysBetweenDates(startDate: Date, endDate: Date) -> Int {
     return components.day!
 }
     
-func typeCheck() {
-    print(type(of: today))
+func typeCheck(varToTypeCheck: Any) {
+    print(type(of: varToTypeCheck))
 }
