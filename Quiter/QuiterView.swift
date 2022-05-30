@@ -1,6 +1,6 @@
 //
 //  QuiterView.swift
-//  iStopIt
+//  Quiter
 //
 //  Created by Jason Wise on 5/30/22.
 //
