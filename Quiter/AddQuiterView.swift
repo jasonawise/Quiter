@@ -13,12 +13,12 @@ struct AddQuiterView: View {
     @State private var quitterName: String = ""
  
     var body: some View {
-        VStack() {
+        VStack(alignment: .leading) {
             TextField("What did / do you want to stop?", text: $quitterName)
                 .font(.title2)
-                .padding()
+                .padding(.bottom)
             Text("When did you stop it?")
-                .font(.title2)
+                .font(.title3)
                 .fontWeight(.light)
             DatePicker(
                 "Date",
@@ -28,14 +28,12 @@ struct AddQuiterView: View {
             .datePickerStyle(.graphical)
             .padding()
             
-            Text("You stoped on: \(stopedDate.formatted(.dateTime.day().month().year()))")
-            
-            Text("Today is: \(today.formatted(.dateTime.day().month().year()))")
-            
+            // this button may not be needed - can see if I can key off date select
             Button(action: {numberOfDaysBetweenDates(startDate: today, endDate: stopedDate)}) {
                 Text("ADD")
             }
         }
+        .padding()
     }
 }
 
