@@ -13,6 +13,7 @@ struct AddQuiterView: View {
     @State private var quitterName: String = ""
     
     @FocusState private var nameIsFocused: Bool
+    @Environment(\.dismiss) var dismiss
  
     var body: some View {
         VStack(alignment: .leading) {
@@ -34,6 +35,12 @@ struct AddQuiterView: View {
             Button(action: {numberOfDaysBetweenDates(startDate: today, endDate: stopedDate)}) {
                 Text("ADD")
             }
+            .padding()
+            
+            Button("Dismiss") {
+                dismiss()
+            }
+            .padding()
         }
         .padding()
     }
