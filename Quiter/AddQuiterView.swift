@@ -11,21 +11,23 @@ struct AddQuiterView: View {
     @State private var stopedDate = Date()
     @State private var today = Date()
     @State private var quitterName: String = ""
+    
+    @FocusState private var nameIsFocused: Bool
  
     var body: some View {
         VStack(alignment: .leading) {
             TextField("What did / do you want to stop?", text: $quitterName)
                 .font(.title2)
-                .padding(.bottom)
-            Text("When did you stop it?")
-                .font(.title3)
-                .fontWeight(.light)
+                .padding()
+                .focused($nameIsFocused)
             DatePicker(
-                "Date",
                 selection: $stopedDate,
                 displayedComponents: [.date]
-            )
-            .datePickerStyle(.graphical)
+            ) {
+                Text("When did you stop it?")
+                    .font(.title3)
+                    .fontWeight(.light)
+            }
             .padding()
             
             // this button may not be needed - can see if I can key off date select
