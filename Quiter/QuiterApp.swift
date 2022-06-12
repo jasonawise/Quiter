@@ -9,11 +9,15 @@ import SwiftUI
 
 @main
 struct QuiterApp: App {
+    
+    @StateObject var data = ThingToQuit()
+    
     var body: some Scene {
         WindowGroup {
             NavigationView {
                 ContentView().navigationTitle("Quitter")
             }
+            .environmentObject(data)
         }
     }
 }

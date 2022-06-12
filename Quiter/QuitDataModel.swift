@@ -7,6 +7,10 @@
 
 import Foundation
 
+class ThingToQuit: ObservableObject {
+    @Published var thingsToQuit = []
+}
+
 
 struct QuitterModel : Identifiable {
     var id = UUID()
