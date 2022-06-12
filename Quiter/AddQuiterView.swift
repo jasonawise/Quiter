@@ -16,33 +16,30 @@ struct AddQuiterView: View {
     @Environment(\.dismiss) var dismiss
  
     var body: some View {
-        VStack(alignment: .leading) {
-            TextField("What did / do you want to stop?", text: $quitterName)
-                .font(.title2)
+        NavigationView {
+            VStack(alignment: .leading) {
+                TextField("What did / do you want to stop?", text: $quitterName)
+                    .font(.title2)
+                    .padding()
+                    .focused($nameIsFocused)
+                DatePicker(
+                    selection: $stopedDate,
+                    displayedComponents: [.date]
+                ) {
+                    Text("When did you stop it?")
+                        .font(.title3)
+                        .fontWeight(.light)
+                }
                 .padding()
-                .focused($nameIsFocused)
-            DatePicker(
-                selection: $stopedDate,
-                displayedComponents: [.date]
-            ) {
-                Text("When did you stop it?")
-                    .font(.title3)
-                    .fontWeight(.light)
             }
-            .padding()
-            
-            // this button may not be needed - can see if I can key off date select
-            Button(action: {numberOfDaysBetweenDates(startDate: today, endDate: stopedDate)}) {
-                Text("ADD")
+            .toolbar {
+                ToolbarItem {
+                    Button("Add") {
+                        dismiss()
+                    }
+                }
             }
-            .padding()
-            
-            Button("Dismiss") {
-                dismiss()
-            }
-            .padding()
         }
-        .padding()
     }
 }
 
